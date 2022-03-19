@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>Trivia Generator</title>
+  <link rel="icon" href="images/brain.png">
+
+  <!-- CSS -->
+  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="container">
+    <img src="images/brain.png" height="100" style="margin-right: 0.5em;" alt="Trivia Generator Logo">
+    Trivia Generator
+  </header>
+
+  <!-- Trivia -->
+  <div class="container">
+    <div id="score-container">Score: 0 out of 0</div>
+    <div id="question-container"></div>
+    <ol id="choices-container"></ol>
+    <div class="center">
+      <button id="next-trivia-btn" class="hide-button" onclick="getTrivia()">Next Trivia</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="center">
+    <a class="footer-item" href="https://www.flaticon.com/free-icons/quiz">Quiz icons created by
+      Freepik - Flaticon</a>
+    <a class="footer-item" href="https://opentdb.com/">Trivia questions provided by Open Trivia DB</a>
+  </footer>
+
+  <!-- JS -->
+  <script onload="getTrivia()" src="js/app.js"></script>
+</body>
+
+</html>

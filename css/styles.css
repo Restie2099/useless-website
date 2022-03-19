@@ -1,0 +1,141 @@
+/* COLOR PALETTE: https://coolors.co/palette/001427-708d81-f4d58d-bf0603-8d0801 */
+:root {
+  --paletteBlack: #001427;
+  --paletteGreen: #708d81;
+  --paletteYellow: #f4d58d;
+  --paletteRed: #bf0603;
+  --paletteDarkRed: #8d0801;
+  --footerHeight: 50px;
+}
+
+body {
+  font-family: 'Bangers', cursive;
+  font-size: xx-large;
+  letter-spacing: 1px;
+  margin: 0;
+  background-color: var(--paletteBlack);
+  color: whitesmoke;
+  /* Height of footer */
+  padding-bottom: var(--footerHeight);
+}
+
+.container {
+  padding: 0 25vw;
+}
+
+/************
+ ** HEADER **
+ ************/
+header {
+  margin: 0.5em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+}
+
+/*************
+ ** SECTION **
+ *************/
+#score-container {
+  margin-bottom: 1em;
+  font-size: x-large;
+  text-align: right;
+}
+
+#question-container {
+  margin-bottom: 2em;
+  padding: 0.75em;
+  border: 5px solid whitesmoke;
+  border-radius: 15px;
+  background-color: whitesmoke;
+  color: var(--paletteBlack);
+  line-height: 1.25em;
+}
+
+#choices-container {
+  margin: 0;
+  margin-bottom: 2em;
+  padding: 0 2em;
+  list-style-type: upper-alpha;
+  list-style-position: inside;
+  font-size: x-large;
+}
+
+.trivia-choice {
+  margin-bottom: 0.5em;
+  padding: 0.75em;
+  border: 3px solid whitesmoke;
+  border-radius: 50px;
+  cursor: pointer;
+  line-height: 1.25em;
+}
+
+.trivia-choice:hover {
+  background-color: var(--paletteYellow);
+  color: var(--paletteBlack);
+}
+
+.correct-answer {
+  pointer-events: none;
+  background-color: var(--paletteGreen);
+  color: var(--paletteBlack);
+}
+
+.incorrect-answer {
+  pointer-events: none;
+  background-color: var(--paletteDarkRed);
+  /* color: var(--paletteBlack); */
+}
+
+#next-trivia-btn {
+  text-align: center;
+  background-color: var(--paletteYellow);
+  border-radius: 15px;
+  font-size: larger;
+  padding: 0.5em;
+  font-family: 'Bangers', cursive;
+  text-decoration: none;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+
+.hide-button {
+  display: none;
+}
+
+/************
+ ** FOOTER **
+ ************/
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: var(--footerHeight);
+  background-color: var(--paletteYellow);
+  color: var(--paletteBlack);
+  font-size: x-large;
+}
+
+.footer-item {
+  margin: 0 1em;
+  text-decoration: none;
+  color: var(--paletteBlack);
+}
+
+.footer-item::before,
+.footer-item::after {
+  content: '\00a0\00a0◈\00a0\00a0';
+}
+
+/****************
+ ** COMMON CSS **
+ ****************/
+.center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
